@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example of event onKeyUp()</title>
+</head>
+<body>
+	<script language="javascript">
+		function showMessage() {
+			var inputText = document.getElementById ("txtMessage");
+			var resultDIV = document.getElementById ("result");
+
+			resultDIV.innerHTML = inputText.value;
+		}
+
+	</script>
+
+	<input type = "text" id="txtMessage" value = "" onkeyup = "showMessage()">
+	<div id="result"></div>
+</body>
+</html>	
