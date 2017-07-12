@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Interroger un serveur web</title>
+</head>
+
+<body>
+    <h1>Quelques langages</h1>
+    <ul id="langages">
+    </ul>
+
+    <script>
+    	var req = new XMLHttpRequest();
+    	req.open("GET", "http://duynguyen.dev/javascript-web-srv/data/langages.txt");
+    	req.addEventListener("load", function(){	
+    		if(req.status >= 200 && req.status < 400) { //le serveur a réussi à traiter la requête
+    			console.log(req.responseText);
+    		} else {
+    			//affichage des informations sur l'échec du traitement de la requête
+    			console.log(req.status + " " + req.statusText);
+    		}
+    	});
+
+    	req.addEventListener('error', function() {
+    		//la requête n'a pas réussi à atteindre le serveur
+    		console.log("Erreur réseau");
+    	});
+
+    	req.send(null);
+    </script>
+</body>
+
+</html>

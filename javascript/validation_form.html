@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Validation Formulaire en Javascript</title>
+	<style>
+		label{
+			display: inline-block;
+			min-width: 200px;
+		}
+
+		span{
+			padding-left: 5px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Les Formulaires en HTML</h1>
+
+	<form method="POST" action="traitement.php">
+		<label for="prenom">Entrez votre prénom: </label>
+		<input type="text" id="prenom" name="prenom" required="required" maxlength="25"> <span id="prenomManquant">*</span><br>
+
+		<label for="prenom">Entrez votre email: </label>
+		<input type="email" id="email" name="email" required="required"> <br>
+
+		<label for="prenom">Numéro de téléphone: </label>
+		<input type="tel" id="tel" name="tel" required="required"> <br>
+
+		<input type="submit" value="Valider" id="btnEnvoi">	
+	</form>
+
+	<script>
+		var validationEvent = document.getElementById('btnEnvoi');
+		validationEvent.addEventListener("click", fValidation);
+		var prenom = document.getElementById('prenom');
+		var prenomValid = /^[a-zA-zéèîïÉÈÎÏ][a-zéèêçîï]+([-'\s][a-zA-zéèîïÉÈÎÏ][a-zéèêçîï]+)?/;
+		var prenomManquant = document.getElementById('prenomManquant');
+
+		function fValidation(e) {
+			if (prenom.validity.valueMissing) {
+				e.preventDefault(); //bloquer d'envoyer
+				prenomManquant.textContent = 'Veuillez saisir votre prénom!';
+				prenomManquant.style.color = 'red';
+			} else if (prenomValid.test(prenom.value) == false) {
+				e.preventDefault();
+				prenomManquant.textContent = "Prénom incorrect format, eg: Anne ou Anne-Sophie";
+				prenomManquant.style.color = 'orange';
+			}
+		}
+	</script>
+</body>
+</html>
