@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<!-- declaration main module of app -->
+<head>
+	<meta charset="UTF-8">
+	<title>Level 1 - Gem Store - AngularJS</title>
+	
+	<!-- bootstrap framework cdn link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-controller="StoreController as store">
+	<div class="container-fluid">
+		<!-- using ng-repeat to loop all the product in products array -->
+		<div class="container" ng-repeat="product in store.products" ng-hide="store.product.soldOut">
+			<h1>Product Name: {{product.name}}</h1>
+			<h2>Price: {{product.price}}€</h2>
+			<p><strong>Description:</strong> {{product.description}}</p>
+			<button ng-show="product.canPurchase">Add to Cart</button>
+		</div>
+	</div>
+	<!-- angularjs libraries	 -->
+	<script src="js/angular.min.js"></script>
+
+	<!-- main app script -->
+	<script src="js/app.js"></script>
+</body>
+</html>
