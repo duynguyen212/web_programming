@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+	<meta charset="UTF-8">
+	<title>Test AngularJS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<style type="text/css">
+		body {
+			background-color: #D7D7D7;
+		}
+	</style>
+</head>
+<body ng-controller="TableCtrl as tab">
+	<div class="container">
+		<h1 class="text-center">Configuration du tableau</h1>
+		<p class="lead pull-right">Ajouter une colone <button class="btn btn-sm btn-success" ng-click="addColumn('+')"><i class="glyicon glyphicon-plus"></i></button></p>		
+		<div>
+			<table border="1">
+				<tr>
+					<th ng-repeat="col in cols">{{col}}</th>
+				</tr>
+				
+    			<tr ng-repeat="row in data">
+      				<td ng-repeat="item in row "><input type="text" value="{{item}}"> </td>
+    			</tr>
+					
+			</table>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
