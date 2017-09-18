@@ -1,0 +1,53 @@
+﻿* {
+    font-family : Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+#PageWrapper {
+    width: 844px;
+    margin: auto;
+}
+
+header {
+    background-color: #C0C0C0;
+    
+    height: 86px;
+}
+
+nav {
+    
+}
+
+section#MainContent {
+    width: 664px;
+    float: left;
+}
+
+section#MainContent a {
+    color: #4cff00;
+    text-decoration: underline;
+}
+
+section#MainContent a:visited {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+section#MainContent a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+aside {
+    width: 180px;
+    background-color: gray;
+    float: left;
+}
+
+footer {
+    background-color: #C0C0C0;
+    clear: both;
+}
