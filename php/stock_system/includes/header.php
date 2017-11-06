@@ -1,4 +1,35 @@
-    <!-- NAVBAR -->
+<?php
+    require_once 'php_action/core.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Stock Management System</title>
+    
+    <!----- bootstrap ----->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!----- bootstrap theme ----->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+    <!----- font-awesome ----->
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!----- custom CSS ----->
+    <link rel="stylesheet" href="custom/css/custom.css">
+    <!----- jQuery Script Library ----->
+    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+    <!----- jQuery UI Library ----->
+    <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.min.css">
+    <script type="text/javascript" src="assets/jquery-ui/jquery-ui.min.js"></script>
+    <!----- Data tables ----->
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+    <!----- File Input ----->
+    <link rel="stylesheet" href="assets/plugins/fileinput/css/fileinput.min.css">
+    <!----- bootstrap JS Library ----->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <!-- NAVBAR -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,3 +75,4 @@
         <!-- /.container-fluid -->
     </nav>
     <!-- END OF NAVBAR -->
+    <div class="container">

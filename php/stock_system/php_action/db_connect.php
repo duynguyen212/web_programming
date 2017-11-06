@@ -1,5 +1,5 @@
 <?php
-    $host = "127.0.0.1";
+    $host = "localhost";
     $user = "root";
     $pwd = "0212";
     $db = "stock";
@@ -9,7 +9,7 @@
     
     //checking connection status
     if ($connect -> connect_error) {
-        die ("Connection is failed! " .$connect -> connect_error);
+        die ("Connection is failed! " . $connect -> connect_error);
     } /*else {
         echo "Connection is succeeded";
     }*/
