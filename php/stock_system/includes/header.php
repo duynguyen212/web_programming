@@ -8,28 +8,28 @@
     <meta charset="UTF-8">
     <title>Dashboard - Stock Management System</title>
     
-    <!----- bootstrap ----->
+    <!-- bootstrap  -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <!----- bootstrap theme ----->
+    <!-- bootstrap theme -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
-    <!----- font-awesome ----->
+    <!-- font-awesome -->
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-    <!----- custom CSS ----->
+    <!-- custom CSS  -->
     <link rel="stylesheet" href="custom/css/custom.css">
-    <!----- jQuery Script Library ----->
+    <!-- jQuery Script Library -->
     <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
-    <!----- jQuery UI Library ----->
+    <!-- jQuery UI Library -->
     <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.min.css">
     <script type="text/javascript" src="assets/jquery-ui/jquery-ui.min.js"></script>
-    <!----- Data tables ----->
+    <!-- Data tables -->
     <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
-    <!----- File Input ----->
+    <!-- File Input -->
     <link rel="stylesheet" href="assets/plugins/fileinput/css/fileinput.min.css">
-    <!----- bootstrap JS Library ----->
+    <!-- bootstrap JS Library -->
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-        <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,9 +45,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li id="navDashboard"><a href="index.php"><i class="glyphicon glyphicon-list-alt"></i> Dashboard </a></li>
+                    <li id="navDashboard"><a href="dashboard.php"><i class="glyphicon glyphicon-list-alt"></i> Dashboard </a></li>
                     <li id="navBrand"><a href="brands.php"><i class="glyphicon glyphicon-btc"></i> Brand </a></li>
                     <li id="navCategories"><a href="category.php"><i class="glyphicon glyphicon-th-list"></i> Category </a></li>
+                    <li id="navProduct"><a href="product.php"><i class="glyphicon glyphicon-ruble"></i> Product </a></li>
                     <li class="dropdown" id="navOrder">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-shopping-cart"></i> Orders <span class="caret"></span></a>
                         <ul class="dropdown-menu">
