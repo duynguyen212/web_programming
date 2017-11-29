@@ -14,7 +14,7 @@
                     </div>
                     
                     <div class="div-action pull-right" style="padding-bottom: 20px;">
-                        <button class="btn btn-default" id="addProductModalBtn" data-toggle="modal" data-target="#addProductModal" onclick="addProduct()"> <i class="glyphicon glyphicon-plus-sign"></i> Add Product</button>
+                        <button class="btn btn-default" id="addProductModalBtn" data-toggle="modal" data-target="#addProductModal" > <i class="glyphicon glyphicon-plus-sign"></i> Add Product</button>
                     </div><!-- End of Div-Action -->
                     
                     <table class="table" id="manageProductsTable">
@@ -46,7 +46,7 @@
                 </div>
                 
                 <form class="form-horizontal" id="submitProductForm" method="POST" enctype="multipart/form-data" action="php_action/createProduct.php">
-                   <div class="modal-body" style="max-height: 500px; overflow: auto;"> 
+                   <div class="modal-body" style="max-height: 450px; overflow: auto;"> 
                         <div id="add-product-message">
                             
                         </div>
@@ -55,8 +55,8 @@
                         	<label for="productImage" class="col-sm-4 control-label">Product Image</label>
                             <div class="col-sm-8">
                                 <!-- the avatar markup - copy from fileinput site  -->
-								<div id="kv-avatar-errors-1" class="center-block" style="width: 800px;display: none"></div>
-								<div class="kv-avatar center-block" style="width: auto">
+								<div id="kv-avatar-errors-1" class="center-block" style="width: 800px;display: none;"></div>
+								<div class="kv-avatar center-block" style="width: 200px;">
 									<input type="file" id = "productImage" name="productImage" class="file-loading">
 								</div>
                             </div>
@@ -64,7 +64,13 @@
                         <div class="form-group">
                             <label for="productName" class="col-sm-4 control-label">Product Name</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="productName" name = "productName" placeholder="Product Name" autocomplete="off" style="width: auto;">
+                                <input type="text" class="form-control" id="productName" name = "productName" placeholder="Product Name" autocomplete="off" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productCode" class="col-sm-4 control-label">Product Code</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="productCode" name = "productCode" placeholder="Product Code" autocomplete="off" >
                             </div>
                         </div>
 						<div class="form-group">
