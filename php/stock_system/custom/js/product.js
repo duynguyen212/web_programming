@@ -1,17 +1,20 @@
-var manageProductTable;
+var manageProductsTable;
 
 $(document).ready(function(){
 	//top navbar 
 	$("#navProduct").addClass('active');
-	manageProductTable = $('#manageProductsTable').DataTable();
+	manageProductsTable = $('#manageProductsTable').DataTable({
+		'ajax' : 'php_action/fetchProduct.php',
+		'order' : []
+	});
 
 	$('#addProductModalBtn').unbind('click').bind('click', function(){
 		
 		//reset product form
-		$('input[type="text"]').val('');
-		$('select').val('');
-		$('.fileinput-remove-button').click();
-
+		$('input[type="text"]').val("");
+		$('select').val("");
+		$('#fileinput-remove-button').click();
+		
 		//remove the error text
 		$('.text-danger').remove();
 		//remove the form error
@@ -38,11 +41,6 @@ $(document).ready(function(){
 		//submit product form function
 		$('#submitProductForm').unbind('submit').bind('submit', function(){
 			
-			//remove the error text
-			$('.text-danger').remove();
-			//remove the form error
-			$('.form-group').removeClass('has-error').removeClass('has-success');
-		
 			var productImage = $('#productImage').val();
 			var productName = $('#productName').val();
 			var productCode = $('#productCode').val();
@@ -125,6 +123,9 @@ $(document).ready(function(){
 			}
 
 			if(productImage && productName && productCode && productQuantity && productRate && productBrandName && productCategoryName && productStatus) {
+				// submit loading button
+				$("#createProductBtn").button('loading');
+
 				var formElt = $(this);
 				var formData = new FormData(this);
 				
@@ -138,30 +139,40 @@ $(document).ready(function(){
 					processData: false,
 					success: function (response) {
 						if(response.success == true) {
+							// submit loading button
+							$("#createProductBtn").button('reset');
+							
 							//reset the form text
 							$('input[type="text"]').val("");
 							$('select').val("");
 							$('#fileinput-remove-button').click();
+
+							$("html, body, div.modal, div.modal-content, div.modal-body").animate({scrollTop: '0'}, 100);
+
+							//reset the form text
+							/*
+							$('input[type="text"]').val("");
+							$('select').val("");
+							$('#fileinput-remove-button').click();*/
 							
 							$('#add-product-message').html('<div class="alert alert-success alert-dismissible" role="alert">' +
 		  												'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' + 
 		  												'<span aria-hidden="true">&times;</span></button> ' +
 		  												'<strong> <i class="glyphicon glyphicon-ok-sign"></i></strong> ' + response.message +
 		  												'</div>');
-
-							//reload the manageCategoryTable
-							manageProductTable.ajax.reload(null, true);
-
 							$(".alert-success").delay(500).show(10, function(){
 								$(this).delay(3000).hide(10, function(){
 									$(this).remove();
 								});
 							}); // End of alert
 
+							//reload the manageCategoryTable
+							manageProductsTable.ajax.reload(null, true);
+
 							//remove the error text
-			$('.text-danger').remove();
-			//remove the form error
-			$('.form-group').removeClass('has-error').removeClass('has-success');
+							$('.text-danger').remove();
+							//remove the form error
+							$('.form-group').removeClass('has-error').removeClass('has-success');
 						} 
 					} // end of success function
 

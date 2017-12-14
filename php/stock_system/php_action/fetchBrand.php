@@ -18,15 +18,9 @@
 			}
 
 			$button = '<!-- Single button -->
-						<div class="btn-group">
-						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    Action <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu">
-						    <li><a type="button" data-toggle="modal" data-target="#editBrandModal" onclick="editBrand(' . $brandID .')"><i class="glyphicon glyphicon-edit"></i> Edit</a></li>
-						    <li><a type="button" data-toggle="modal" data-target="#removeBrandModal" onclick="removeBrand(' . $brandID .')"><i class="glyphicon glyphicon-trash"></i> Remove</a></li>
-						  </ul>
-						</div>';
+						    <button class="btn btn-info" data-toggle="modal" data-target="#editBrandModal" onclick="editBrand(' . $brandID .')"><i class="glyphicon glyphicon-edit"></i> Edit</button>
+						    <button class="btn btn-danger" data-toggle="modal" data-target="#removeBrandModal" onclick="removeBrand(' . $brandID .')"><i class="glyphicon glyphicon-trash"></i> Remove</button>
+						';
 
 			$output['data'][] = array(
 				$row[1],

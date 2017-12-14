@@ -17,8 +17,8 @@
 				$categoryStatus = "<label class='label label-danger'>Not Available</label>";
 			}
 
-			$button = '<button type="button" class="btn btn-info"data-toggle="modal" data-target="#editCategoryModal" onclick="editCategory(' . $categoryID .')"><class="glyphicon glyphicon-edit"></i> Edit</button>
-						<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#removeCategoryModal" onclick="removeCategory(' . $categoryID .')"><class="glyphicon glyphicon-trash"></i> Remove</button>';
+			$button = '<button class="btn btn-info"data-toggle="modal" data-target="#editCategoryModal" onclick="editCategory(' . $categoryID .')"><i class="glyphicon glyphicon-edit"></i> Edit</button>
+						<button class="btn btn-danger"data-toggle="modal" data-target="#removeCategoryModal" onclick="removeCategory(' . $categoryID .')"><i class="glyphicon glyphicon-trash"></i> Remove</button>';
 
 			$output['data'][] = array(
 				$row[1],

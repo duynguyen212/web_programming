@@ -23,6 +23,7 @@
 
 					//insert into database
 					$sqlStr = "INSERT INTO product (product_name, product_code, product_image, brand_id, categories_id, quantity, rate, active, status) VALUES ('$productName', '$productCode', '$url', '$productBrandName', '$productCategoryName', '$productQuantity', '$productRate', 1, '$productStatus')";
+					
 					if($connect->query($sqlStr) == TRUE){
 						$valid['success'] = true;
 						$valid['message'] = "Successfully Added";	
@@ -36,6 +37,9 @@
 				}
 			}
 		}
+		
+		$connect->close();
+
 		echo json_encode($valid);
 	}
 ?>

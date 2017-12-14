@@ -22,7 +22,7 @@
                             <tr>
                                 <th>Brand Name</th>
                                 <th>Status</th>
-                                <th style="width: 15%;">Options</th>
+                                <th style="width: 20%;">Options</th>
                             </tr>
                         </thead>
                     </table>
