@@ -13,7 +13,7 @@ $(document).ready(function(){
 		//reset product form
 		$('input[type="text"]').val("");
 		$('select').val("");
-		$('#fileinput-remove-button').click();
+		$('.fileinput-remove-button').click();
 		
 		//remove the error text
 		$('.text-danger').remove();
@@ -145,7 +145,7 @@ $(document).ready(function(){
 							//reset the form text
 							$('input[type="text"]').val("");
 							$('select').val("");
-							$('#fileinput-remove-button').click();
+							$('.fileinput-remove-button').click();
 
 							$("html, body, div.modal, div.modal-content, div.modal-body").animate({scrollTop: '0'}, 100);
 
@@ -183,3 +183,59 @@ $(document).ready(function(){
 		}); //Submit to add category
 	}); //add product modal
 });
+
+//remove Product
+function removeProduct (productID = null) {
+	if (productID) {
+		//remove the button click
+		$("#removeProductBtn").unbind().bind('click', function(){
+			$.ajax({
+				url : 'php_action/removeProduct.php',
+				type : 'post',
+				data : {productID: productID},
+				dataType : 'json',
+				success : function (response) {
+					if (response.success == true ) {
+						//close the remove product modal
+						$("#removeProductModal").modal('hide');
+
+						//reload the product table
+						manageProductsTable.ajax.reload (null, false);
+
+						//display the remove messages
+						$(".remove-message").html('<div class="alert alert-success alert-dismissible" role="alert">' +
+  													'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' + 
+  													'<span aria-hidden="true">&times;</span></button>' +
+  													'<strong> <i class="glyphicon glyphicon-ok-sign"> </i></strong>' + response.message +
+													'</div>');
+						$(".alert-success").delay(500).show(10, function(){
+								$(this).delay(3000).hide(10, function(){
+									$(this).remove();
+								});
+						}); // End of alert
+
+					} else {
+						//display the remove messages
+						$(".remove-message").html('<div class="alert alert-warning alert-dismissible" role="alert">' +
+  													'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' + 
+  													'<span aria-hidden="true">&times;</span></button>' +
+  													'<strong> <i class="glyphicon glyphicon-exclamation-sign"> </i></strong>' + response.message +
+													'</div>');			
+						$(".alert-warning").delay(500).show(10, function(){
+								$(this).delay(3000).hide(10, function(){
+									$(this).remove();
+								});
+						}); // End of alert			
+					}
+				} //success
+			}); //ajax handle
+		});
+	}
+} 
+
+//edit Product
+function editProduct (productID = null) {
+	if (productID) {
+		
+	}
+}
