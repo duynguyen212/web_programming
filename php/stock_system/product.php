@@ -146,9 +146,9 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">  <i class="fa fa-plus"></i> Edit Product</h4>
                 </div>
-                <form class="form-horizontal" id="editProductForm" action="php_action   /editProduct.php" method="post">
-                   <div class="modal-body" style="height: 450px; overflow: auto;">
-                        <div>
+                
+                <div class="modal-body" style="height: 500px; overflow: auto;">
+                    <div>
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#photo" aria-controls="home" role="tab" data-toggle="tab">Photo</a></li>
@@ -161,35 +161,36 @@
                                     
                                 </div> <!-- photo tabpanel -->
                                 <div role="tabpanel" class="tab-pane" id="productInfo">
-                                    <form class="form-horizontal" id="submitProductForm" method="POST" enctype="multipart/form-data" action="php_action/createProduct.php">
+                                    <form class="form-horizontal" id="editProductForm" method="POST" action="php_action/editProduct.php">
+                                        <br/>   
                                         <div class="form-group">
-                                            <label for="productName" class="col-sm-4 control-label">Product Name</label>
+                                            <label for="editProductName" class="col-sm-4 control-label">Product Name</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="productName" name = "productName" placeholder="Product Name" autocomplete="off" >
+                                                <input type="text" class="form-control" id="editProductName" name = "editProductName" placeholder="Product Name" autocomplete="off" >
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="productCode" class="col-sm-4 control-label">Product Code</label>
+                                            <label for="editProductCode" class="col-sm-4 control-label">Product Code</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="productCode" name = "productCode" placeholder="Product Code" autocomplete="off" >
+                                                <input type="text" class="form-control" id="editProductCode" name = "editProductCode" placeholder="Product Code" autocomplete="off" >
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="productQuantity" class="col-sm-4 control-label">Quantity</label>
+                                            <label for="editProductQuantity" class="col-sm-4 control-label">Quantity</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="productQuantity" name = "productQuantity" placeholder="Product Quantity" autocomplete="off">
+                                                <input type="text" class="form-control" id="editProductQuantity" name = "editProductQuantity" placeholder="Product Quantity" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="productRate" class="col-sm-4 control-label">Rate</label>
+                                            <label for="editProductRate" class="col-sm-4 control-label">Rate</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="productRate" name = "productRate" placeholder="Product Rate" autocomplete="off">
+                                                <input type="text" class="form-control" id="editProductRate" name = "editProductRate" placeholder="Product Rate" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="productBrandName" class="col-sm-4 control-label">Brand Name</label>
+                                            <label for="editProductBrandName" class="col-sm-4 control-label">Brand Name</label>
                                             <div class="col-sm-8">
-                                                <select class="form-control" name="productBrandName" id="productBrandName" >
+                                                <select class="form-control" name="editProductBrandName" id="editProductBrandName" >
                                                     <option value=""> ~~~~~  SELECT  ~~~~~</option> 
                                                     <?php 
                                                         $sqlStr = "SELECT brand_id, brand_name FROM brands WHERE brand_active = 1 AND brand_status = 1";
@@ -202,9 +203,9 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="productCategoryName" class="col-sm-4 control-label">Category Name </label>
+                                            <label for="editProductCategoryName" class="col-sm-4 control-label">Category Name </label>
                                             <div class="col-sm-8">
-                                                <select class="form-control" name="productCategoryName" id="productCategoryName" >
+                                                <select class="form-control" name="editProductCategoryName" id="editProductCategoryName" >
                                                     <option value=""> ~~~~~  SELECT  ~~~~~</option> 
                                                     <?php 
                                                         $sqlStr = "SELECT categories_id, categories_name FROM category WHERE categories_active = 1 AND categories_status = 1";
@@ -217,25 +218,27 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="productStatus" class="col-sm-4 control-label">Status</label>
+                                            <label for="editProductStatus" class="col-sm-4 control-label">Status</label>
                                             <div class="col-sm-8">
-                                                <select class="form-control" name="productStatus" id="productStatus" >
+                                                <select class="form-control" name="editProductStatus" id="editProductStatus" >
                                                     <option value=""> ~~~~~  SELECT  ~~~~~</option> 
                                                     <option value="1">Available</option> 
                                                     <option value="2">Not Available</option> 
                                                 </select>
                                             </div>
                                         </div>
-                                    </form>
-                                </div> <!-- product info tabpanel -->
-                            </div> <!-- end of tabpanel -->
-                        </div> <!-- end of navtabs -->
-                    </div>
-                    <div class="modal-footer editCategoryFooter">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" id="editCategoryBtn" data-loading-text="Loading">Save changes</button>
-                    </div>
-                </form>
+
+                                        <div class="modal-footer editProductFooter">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="editCategoryBtn" data-loading-text="Loading">Save changes</button>
+                </div>
+                                </form>
+                            </div> <!-- product info tabpanel -->
+                        </div> <!-- end of tabpanel -->
+                    </div> <!-- end of navtabs -->
+                </div>
+                    
+                
             </div>
             <!-- /.modal-content -->
         </div>

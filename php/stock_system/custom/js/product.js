@@ -236,6 +236,102 @@ function removeProduct (productID = null) {
 //edit Product
 function editProduct (productID = null) {
 	if (productID) {
-		
+		//remove productID textbox
+		$("#editProductID").remove();
+
+		$.ajax({
+			url: 'php_action/fetchSelectedProduct.php',
+			type: 'post',
+			data : {productID: productID},
+			dataType: 'json',
+			success: function (response) {
+				$("#editProductName").val(response.product_name);
+				$("#editProductCode").val(response.product_code);
+				$("#editProductQuantity").val(response.quantity);
+				$("#editProductRate").val(response.rate);
+				$("#editProductBrandName").val(response.brand_id);
+				$("#editProductCategoryName").val(response.categories_id);
+				$("#editProductStatus").val(response.status);
+				$(".editProductFooter").append('<br/> <input type="text" id = "editProductID"' + 
+					'name = "editProductID" value="' + response.product_id + '">');
+
+				//submit form edit product
+				$("#editProductForm").unbind('submit').bind('submit', function(){
+					//form validation
+					var productName = $('#editProductName').val();
+					var productCode = $('#editProductCode').val();
+					var productQuantity = $('#editProductQuantity').val();
+					var productBrandName = $('#editProductBrandName').val();
+					var productCategoryName = $('#editProductCategoryName').val();
+					var productStatus = $('#editProductStatus').val();
+					var productRate = $('#editProductRate').val();
+
+					if (productName == "") {
+						$('#productName').after('<p class="text-danger">Product Name is required!</p>');
+						$('#productName').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productName').find('.text-danger').remove();
+						$('#productName').closest('.form-group').addClass('has-success');
+					}
+
+					if (productCode == "") {
+						$('#productCode').after('<p class="text-danger">Product Name is required!</p>');
+						$('#productCode').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productCode').find('.text-danger').remove();
+						$('#productCode').closest('.form-group').addClass('has-success');
+					}
+
+					if (productQuantity == "") {
+						$('#productQuantity').after('<p class="text-danger">Quantity is required!</p>');
+						$('#productQuantity').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productQuantity').find('.text-danger').remove();
+						$('#productQuantity').closest('.form-group').addClass('has-success');
+					}
+
+					if (productRate == "") {
+						$('#productRate').after('<p class="text-danger">Rate is required!</p>');
+						$('#productRate').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productRate').find('.text-danger').remove();
+						$('#productRate').closest('.form-group').addClass('has-success');
+					}
+
+					if (productBrandName == "") {
+						$('#productBrandName').after('<p class="text-danger">Brand Name is required!</p>');
+						$('#productBrandName').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productBrandName').find('.text-danger').remove();
+						$('#productBrandName').closest('.form-group').addClass('has-success');
+					}
+
+					if (productCategoryName == "") {
+						$('#productCategoryName').after('<p class="text-danger">Category Name is required!</p>');
+						$('#productCategoryName').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productCategoryName').find('.text-danger').remove();
+						$('#productCategoryName').closest('.form-group').addClass('has-success');
+					}			
+
+					if (productStatus == "") {
+						$('#productStatus').after('<p class="text-danger">Product Status is required!</p>');
+						$('#productStatus').closest('.form-group').addClass('has-error');
+					} else {
+						//remove the error messages
+						$('#productStatus').find('.text-danger').remove();
+						$('#productStatus').closest('.form-group').addClass('has-success');
+					}
+
+					return false;
+				}); //edit product form
+			} //success
+		}); //ajax to fetch selected product info
 	}
 }
