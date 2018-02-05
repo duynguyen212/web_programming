@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webform_LoginDemo", "Webform_LoginDemo\Webform_LoginDemo.csproj", "{9BB24883-BCFC-4FCF-9F75-D16494951AFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB24883-BCFC-4FCF-9F75-D16494951AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB24883-BCFC-4FCF-9F75-D16494951AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB24883-BCFC-4FCF-9F75-D16494951AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB24883-BCFC-4FCF-9F75-D16494951AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2EEF1B6-1E28-4106-BE9A-37F8CD06BCA8}
+	EndGlobalSection
+EndGlobal
