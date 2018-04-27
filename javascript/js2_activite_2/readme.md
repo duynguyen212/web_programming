@@ -1,6 +1,6 @@
 #1.Activité 2 - Gérez l’ajout de nouveaux liens
 
-<img src="https://imgur.com/I9Oauml"/>
+<img src="https://imgur.com/I9Oauml">
 
 <ul>
 <li>Le formulaire apparaît lors du clic sur le bouton “Ajouter un lien”.</li>
