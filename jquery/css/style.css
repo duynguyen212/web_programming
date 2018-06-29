@@ -1,0 +1,167 @@
+body {
+	text-align: center;
+}
+
+#box {
+	height: 200px;
+	width: 200px;
+	background: #a3c;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 200px;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.thing {
+	height: 200px;
+	width: 200px;
+	background: #ac3;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 200px;
+	border-top-left-radius: 200px;
+	margin-top: 20px;
+}
+
+button {
+	background: #933;
+	color: #fff;
+	padding: 10px;
+	margin-top: 20px;
+	border: solid 2px #000;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+/* jQuery Chaining - Notification-bar */
+
+#chaining .notification-bar {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100;
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+#chaining .notification-bar a {
+	color: #fc3;
+}
+
+/* HIDING & SHOWING JQUERY LECTURE */
+
+.hidden {
+	display: none;
+}
+
+#box1 {
+	margin: 0 auto;
+	height: 100px;
+	width: 100px;
+	background: #fc3;
+	color: #fff;
+	border: solid 4px #333; 
+}
+
+/* jQuery Animate Lecture */
+
+#navArrows {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 100px auto 0;
+	background: #333;
+	border-radius: 200px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	padding: 20px;
+}
+
+.navigationArrow {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0;
+	position: absolute;
+	margin: 0;
+	top: 20px;
+	left: 20px;
+	background: white;
+	color: #222;
+}
+
+#up {
+	left: 50%;
+	margin-left: -25px;
+}
+
+#down {
+	bottom: 20px;
+	top:inherit;
+	left: 50%;
+	margin-left: -25px;
+}
+
+#left, #right {
+	top: 50%;
+	margin-top: -25px;
+}
+
+#right {
+	right: 20px;
+	left: inherit;
+}
+
+.box-anim {
+	/*being animated, we define position : relative */
+	position: relative;
+	margin: 0 auto;
+	height: 100px;
+	line-height: 100px;
+	width: 100px;
+	background: #ccc;
+	color: #fff;
+	border: solid 4px #333; 
+	
+}
+
+/* -----------------------------------
+	jQuery Modifying CSS LECTURE 
+   -----------------------------------  */
+#circle1 {
+	display: inline-block;
+	background: #8a8d22;
+	color: #fff;
+	text-align: center;
+	line-height: 140px;
+	height: 140px;
+	width: 140px;
+	margin: 40px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+
+}
+
+/* che lai nhu sau */
+
+.cssChoCircle1va2 {
+	display: inline-block;
+	background: #8a8d22;
+	color: #fff;
+	text-align: center;
+	line-height: 140px;
+	height: 140px;
+	width: 140px;
+	margin: 40px;
+}
+
+.circleShape {
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}

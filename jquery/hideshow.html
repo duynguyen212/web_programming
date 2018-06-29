@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Hiding &amp; Showing</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Hiding &amp; Showing Elements in jQuery</h1>
+	
+	<p>
+		Until now we have been writing jQuery statements one at a time (one after the other).
+
+		However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the other, on the same element(s).
+	</p>
+
+	<div class="hidden">
+		Yoo hoo! I'm hiding.....................
+	</div>
+
+	<h2>A level 2 heading</h2>
+	<div id="box1">A box!</div>
+	<span class="foo">Whatchu looking at, foo </span>
+	<span class="bar">Bar none, I'm awesome</span>
+	
+	<br>
+
+	<hr>
+
+	<button>I'm a good ol fashioned button</button>
+	<!-- load the CDN first -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- if CDN fails to load -->
+	<script>window.jQuery || document.write ('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="js/myscript.js"></script>
+</body>
+</html>
