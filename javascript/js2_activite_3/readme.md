@@ -28,7 +28,8 @@ L’API d’ajout d’un lien est https://oc-jswebsrv.herokuapp.com/api/lien. Elle att
 
 Voici le format JSON d’un lien.</p>
 
-`{
+<pre>
+{
 
   “titre”: “titre du lien”,
 
@@ -36,4 +37,5 @@ Voici le format JSON d’un lien.</p>
 
   “auteur”: “auteur du lien”
 
-}`
+}
+</pre>
