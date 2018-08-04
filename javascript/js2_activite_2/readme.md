@@ -9,4 +9,3 @@
 <li>Lorsque l’utilisateur valide le nouveau lien, celui-ci est ajouté en haut de la page, le formulaire d’ajout disparaît et un message d’information s’affiche pendant 2 secondes. </li>
 <li>Les variables JavaScript doivent respecter la norme camelCase et le fichier liensweb.js doit être correctement indenté.</li>
 </ul>
-<a href="http://duynguyen-dev.cf/js2_activite_3/html/lienweb.html">Live Demo</a>
