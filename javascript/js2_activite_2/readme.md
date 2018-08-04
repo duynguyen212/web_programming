@@ -1,4 +1,4 @@
-#1.Activité 2 - Gérez l’ajout de nouveaux liens
+# Activité 2 - Gérez l’ajout de nouveaux liens
 
 <img src="https://i.imgur.com/I9Oauml.gif">
 
