@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5em;
+	background-color: #f4f4f4; 
+}
+
+#container {
+	background-color: #333; 
+	margin: 50px auto;
+	width: 60%;
+	overflow: auto;
+	min-height: 680px;
+}
+
+header h1 {
+	color: #fff;
+	font-size: 22px;
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #fff;
+}
+
+#shouts {
+	width: 90%;
+	background-color: #f4f4f4; 
+	margin: 20px auto;
+	height: 400px;
+	overflow: auto;
+}
+
+.shout {
+	list-style: none;
+	padding: 8px;
+	border-bottom: 1px dotted #ccc;
+}
+
+.shout span {
+	color: #aaa;
+	font-weight: 700;
+}
+
+#input {
+	width: 90%;
+	min-height: 80px;
+	margin: auto;
+	padding: 0;
+}
+
+#input input[type='text'] {
+	height: 25px;
+	width: 48%;
+	padding: 5px;
+	margin-bottom: 20px;
+	border-bottom: #666 solid 1px;
+}
+
+#input .shoutit-btn {
+	padding: 5px;
+	margin-bottom: 20px;
+	width: 100%;
+	margin: 10px auto;
+	background-color: green;
+	color: #fff;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.error {
+	width: 98%;
+	color: #fff;
+	padding: 10px;
+	background-color: red;
+	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	#input input[type='text'] {
+		width: 98%;
+	}
+}
