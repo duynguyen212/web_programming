@@ -1,3 +1,39 @@
+<?php 
+	include 'database.php';
+
+	//set question number 
+	$number = (int)$_GET['n'];
+
+	/*
+	*	Get the question 
+	*/
+	$query = "SELECT * FROM questions WHERE question_number =$number";
+
+	//get result
+	$result = $mysqli->query ($query) or die ($mysqli->error .__LINE__);
+
+	$question = $result->fetch_assoc();
+
+	/*
+	*	Get the answer 
+	*/
+	$query = "SELECT * FROM choices WHERE question_id =$number";
+
+	//get result
+	$choices = $mysqli->query ($query) or die ($mysqli->error .__LINE__);
+
+	/* 
+	*	Get the total questions
+	*/
+	$query = "SELECT * FROM questions";
+
+	//get result
+	$results = $mysqli->query ($query) or die ($mysqli->error .__LINE__);
+	$total = $results->num_rows;
+?>
+
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,18 +50,19 @@
 	<main>
 		<div class="container">
 			<div class="current">
-				Question 1 of 5
+				Question <?php echo $question['question_number']; ?> of <?php echo $total; ?>
 			</div>
 			<p class="question">
-				What does PHP stand for?
+				<?php echo $question['question_text'] ?>
 			</p>
 			<form action="process.php" method="post">
 				<ul class="choices">
-					<li><input type="radio" name="choice" value="1"> PHP: Hypertext Preprocessor</li>
-					<li><input type="radio" name="choice" value="1"> PHP: Private Home Page</li>
-					<li><input type="radio" name="choice" value="1"> PHP: Preprocessor Hypertext Page</li>
-					<li><input type="radio" name="choice" value="1"> PHP: Personal Hypertext Preprocessor</li>
+					<?php  while ($row = $choices->fetch_assoc()): ?>
+						<li><input type="radio" name="choice" value="<?php echo $row['id']?>"> <?php echo $row['text']; ?></li>
+					<?php endwhile; ?>
 				</ul>
+				<input type="submit" value="Submit">
+				<input type="hidden" name="number" value="<?php echo $number; ?>">
 			</form>
 		</div>
 	</main>
