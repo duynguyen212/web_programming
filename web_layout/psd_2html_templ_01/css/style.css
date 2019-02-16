@@ -1,0 +1,379 @@
+/* add font Bebas */
+@font-face {
+    font-family: 'utm bebas';
+    src: url('../fonts/utm-bebas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif /*, 'helvetica-neue-light'*/;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+/* end of body  */
+
+/* header-top */
+.header-top {
+    padding: 10px 0;
+    background: #f9f6f7;
+}
+
+.contact-info i {
+    background: #e67c8e;
+    color: #fff;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.menu-header {
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu-header li {
+    display: inline-block;
+}
+
+.menu-header li a {
+    padding: 0 15px;
+    border-left: 1px solid #333;
+    color: #000;
+}
+.menu-header li a:hover {
+    color: #e67c8e;
+}
+
+.menu-header li a i {
+    margin-right: 3px;
+}
+/* end of header-top  */
+
+/* header-center */
+.header-center {
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.service li {
+    display: inline-block;
+    margin-right: 30px;
+    padding-left: 60px;
+}
+
+.service li.icon1{
+    background: url('../images/icon1.png') no-repeat left center;
+}
+
+.service li.icon2{
+    background: url('../images/icon2.png') no-repeat left center; 
+}
+
+.service li.icon3{
+    background: url('../images/icon3.png') no-repeat left center;
+}
+
+.service li p {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+/* end of header-center  */
+
+/* header-bottom */
+.header-bottom hr {
+    margin: 10px 0;
+}
+
+.menu-top ul li {
+    display: inline-block;
+}
+
+.menu-top ul li a {
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ 
+.menu-top ul li a:hover, .menu-top ul li a.active {
+    color: #e67c8e;
+}
+
+.form-search input {
+    background: #ededed;
+}
+
+.form-search .btn-default {
+    background: #ddd;
+    color: #fff;
+}
+
+.carousel img {
+    width: 100%;
+}
+/* end of header-bottom  */
+
+/* content-body */
+.content-body {
+    margin-top: 35px;
+}
+
+.item-list {
+    background-color: #fbf9fa;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.item-list h3 a {
+    text-transform: uppercase;
+    color: #000;
+    font-family: helvetica;
+    font-style: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.img-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-item img {
+    transition: all ease-in .3s;
+    transform: scale(.9);
+}
+
+.img-item:hover img {
+    transform: scale(1.05);
+}
+
+.item-list p {
+    text-align: justify;
+}
+
+.item-list h3 a:hover {
+    color: #e67c8e;
+}
+
+.title-produit {
+    font-style: 16px;
+    margin: 20px 0;
+}
+
+.title-produit span {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e67c8e;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.product-item {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+.product-item .img-pro {
+    height: 258px;
+    overflow: hidden;
+    margin: 0 15px;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.product-item .img-pro img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.product-item .img-pro span {
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    border-radius: 100%; 
+    line-height: 50px;
+    text-align: center;
+    z-index: 99;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.product-item .img-pro .new-items {
+    background: #66bebb;
+}
+
+.product-item .img-pro .sale-items {
+    background: #ff8549;
+}
+
+.product-item .price-box {
+    text-align: center;
+    clear: both;
+    margin-top: 10px;
+}
+
+.product-item .price-box .price-new {
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.product-item .price-box .price-old {
+    text-decoration: line-through;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.product-item h3 a {
+    color: #000;
+}
+
+.product-item h3 a:hover {
+    color: #e67c8e;
+}
+
+.btn-view {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-view a {
+    text-transform: uppercase;
+}
+
+/*----- Common Box -----*/ 
+.common-box {
+    background: #fbf9fa;
+    padding: 30px 0;
+    margin: 20px 0;
+}
+.box-buy {
+    padding-top : 10px;
+    padding-left:  200px;
+    padding-bottom: 10px;
+}
+
+#box-buy-bg {
+    background: url('../images/phone_icon.png') no-repeat left center;
+}
+
+#box-gift-bg {
+    background: url('../images/qua_icon.png') no-repeat left center;
+}
+
+.content-buy {
+    background: #fff;   
+    padding: 15px;
+}
+
+.content-buy p {
+    text-align: justify;
+}
+
+.brand-logo {
+    padding: 30px 0;
+}
+
+.brand-logo img {
+    max-width: 100%; 
+    height: 148px;
+}
+
+footer {
+    background: #e7e7e7;
+    padding: 30px 0 0;
+}
+
+.item-content-ft {
+    background: #fff;
+    padding: 15px;
+}
+
+footer h3 {
+    font-family: 'utm bebas';
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 10px;
+}
+
+.ft-common {
+    margin-bottom: 20px;
+}
+
+.item-content-ft p {
+    margin-bottom: 10px;
+    width: 100%;
+    clear: both;
+    height: 30px;
+}
+
+.item-content-ft p i {
+    float: left;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.item-content-ft p span {
+    vertical-align: middle;   
+}
+
+.list-item-ft ul {
+    padding: 0 0 10px 10px;
+}
+
+.list-item-ft ul li a{
+    color: #000;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.register .btn-default {
+    background: #e67c8e !important;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.ft-bottom {
+    background: #f9f6f7;
+    padding: 5px 0;
+}
+
+.ft-bottom p {
+    line-height: 45px;
+}
+
+.ft-bottom img {
+    float: right;
+}
