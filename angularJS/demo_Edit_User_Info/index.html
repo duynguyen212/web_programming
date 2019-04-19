@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"  >
+	<head>
+	<title> Document  </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 	
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/angular-material.min.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="1.css">
+</head>
+<body ng-app="myApp" ng-controller="MyController">
+	<div id="list">
+		<div class="container">
+			<div class="jumbotron">
+			  <h1 class="display-4">Using ng-repeat to display an array</h1>
+			  <p>.....</p>
+			</div>
+			
+			<div ng-repeat="user in users" ng-init="user.editUser=false">
+				<div class="card user-edit" ng-show="user.editUser">
+					<h5 class="card-header">edit user's information</h5>
+					<div class="card-block">
+						<div class="form-group">
+							<label for="name">Name	</label>
+							<input id="name" type="text" class="form-control" ng-model="user.name">
+						</div>
+						<div class="form-group">
+							<label for="year">Year of Birth	</label>
+							<input id="year" type="text" class="form-control" ng-model="user.yearofbirth">
+						</div>
+
+						<div class="form-group">
+							<label for="fb">Facebook	</label>
+							<input id="fb" type="text" class="form-control" ng-model="user.facebook">
+						</div>
+
+						<button class="btn btn-outline-success btn-block" ng
+						ng-click="onEditUser(user)">Save</button>
+					</div>
+				</div>
+
+				<div class="card" ng-show="!user.editUser">
+					<h5 class="card-header">{{user.name}} <button class="btn btn-primary float-xs-right" ng-click="onEditUser(user)"><i class="fa fa-pencil"></i></button></h5>
+					<div class="card-block">
+						<b>Name: </b> {{user.name}} <br>
+						<b>Year of birth : {{user.yearofbirth}}</b> <br>
+						<b>Facebook : </b> {{user.facebook}}
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	 
+
+
+
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>  
+	<script type="text/javascript" src="vendor/angular-1.5.min.js"></script>  
+  	<script type="text/javascript" src="vendor/angular-animate.min.js"></script>
+  	<script type="text/javascript" src="vendor/angular-aria.min.js"></script>
+ 	<script type="text/javascript" src="vendor/angular-messages.min.js"></script>
+ 	<script type="text/javascript" src="vendor/angular-material.min.js"></script>  
+  	<script type="text/javascript" src="1.js"></script>
+</body>
+</html>
