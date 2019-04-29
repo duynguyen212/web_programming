@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "GetEmployeeList";
+}
+
+<h2>GetEmployeeList</h2>
+
+<div ng-controller="empCtrl">
+    <table class="table table-striped">
+        <tr>
+            <th>Employee Name</th>
+            <th>Hired Date</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Postal Code</th>
+        </tr>
+        <tr ng-repeat="emp in Employees">
+            <td>{{emp.FirstName}}, {{emp.LastName | uppercase}}    </td>
+            <td>{{emp.HiredDate.slice(6,-2) | date: 'dd/MM/yyyy'}}</td>
+            <td>{{emp.Address}}</td>
+            <td>{{emp.City}}</td>
+            <td>{{emp.PostalCode}}</td>
+        </tr>
+    </table>
+</div>
+

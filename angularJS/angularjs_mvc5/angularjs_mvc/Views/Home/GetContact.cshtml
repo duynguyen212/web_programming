@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "GetContact";
+}
+
+<h2>GetContact</h2>
+<div ng-controller="dataCtrl">
+    <h3>Full Name : {{Contact.FirstName}}, {{Contact.LastName | uppercase}}</h3>
+    <h5>Phone Number : {{Contact.ContactNo1}}</h5>
+    <h5>Address : {{Contact.Address}}</h5>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>{{Contact.FirstName}}, {{Contact.LastName | uppercase}}</td>
+            <td>{{Contact.ContactNo1}}</td>
+            <td>{{Contact.Address}}</td>
+        </tr>
+    </table>
+</div>
+
+@section scripts {
+    
+}
