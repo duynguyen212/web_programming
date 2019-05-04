@@ -44,5 +44,10 @@ namespace angularjs_mvc.Controllers
         {
             return View();
         }
+
+        public ActionResult getCountryandState()
+        {
+            return View();
+        }
     }
 }

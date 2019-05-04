@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "getCountryandState";
+}
+
+<h2>getCountryandState</h2>
+
+<div  ng-controller="getCountryandStateCtrl">
+    Country
+    <!-- ng-options="I.CountryID as I.CountryName for I in CountryList" -->
+    <select ng-options="c.CountryId as c.CountryName for c in CountryList" ng-model="CountryID" ng-change="getState()" class="form-control">
+        <option value="">Select country</option>
+    </select>
+    State
+    <select ng-model="StateID" ng-options="s.StateId as s.StateName for s in StateList">
+        <option value="">{{StateTextToShow}}</option>
+    </select>
+
+    <input type="button" name="name" value="Get selected values" ng-click="ShowStateIntoSelect()" />
+    <div style="margin-top:15px;padding:15px; background:#808080; color:#bcfffd; border: 1px solid #f3f3f3">{{Result}}</div>
+</div>
+@section scripts 
+{
+    <script src="~/Scripts/fetchCountryandState.js"></script>
+}
