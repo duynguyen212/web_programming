@@ -1,2 +1,2 @@
-# web_programming
+# HTML, CSS, JS
 
